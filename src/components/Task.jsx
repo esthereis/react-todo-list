@@ -2,7 +2,7 @@ import '../../src/App.css';
 
 function Task(props) {
   return (
-    <li className='newTask'>
+    <li className='newTaskElement'>
       <input onChange={() => props.onCheck()} type='checkbox' />
       <span>{props.task}</span>
     </li>

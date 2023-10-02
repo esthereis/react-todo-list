@@ -1,7 +1,7 @@
 body {
   background-color: rgb(188, 178, 178);
 
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Roboto Mono', monospace;
 }
 
 h1 {
@@ -9,20 +9,21 @@ h1 {
   font-weight: lighter;
 }
 
-.container {
+.todoTasksContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto;
+  padding: 2rem;
 
   background-color: white;
 
   height: 32rem;
   width: 32rem;
-  padding: 2rem;
   border-radius: 5%;
 }
 
-.addItem {
+.inputElement {
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
@@ -44,14 +45,14 @@ h1 {
 .inputTask:hover,
 .addButton:hover {
   opacity: 50%;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 
   cursor: pointer;
   border: 1px solid black;
 }
 
-.newTask {
-  display: flex;
-  gap: 3rem;
+.newTaskElement {
+  list-style-type: none;
 }
 
 .newTask li {
@@ -65,4 +66,31 @@ hr.solid {
 
 .hidden {
   display: none;
+}
+
+.doneTasksContainer {
+  display: flex;
+  flex-direction: column;
+
+  color: grey;
+  text-decoration: line-through;
+}
+
+.doneTaskElement {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  list-style-type: none;
+}
+
+.deleteIcon {
+  opacity: 50%;
+  height: 0.8rem;
+}
+
+input[type='checkbox']:hover,
+.deleteIcon:hover {
+  cursor: pointer;
+  opacity: 20%;
 }
